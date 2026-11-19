@@ -5,12 +5,12 @@
   --sapphire:#0a1b52; --sapphire-hi:#6d95ff;
   --wine:#4d0e26; --wine-hi:#ff6f98;
   --gold:#e6bd6a; --gold-hi:#f6dfa6;
-  --cream:#f4eedf; --mute:rgba(244,238,223,.66); --faint:rgba(244,238,223,.38);
+  --cream:#f4eedf; --mute:rgba(244,238,223,.82); --faint:rgba(244,238,223,.6);
   --glass:rgba(255,255,255,.055); --glass-b:rgba(255,255,255,.16);
-  --f-display:"Bodoni Moda",Didot,"Times New Roman",serif;
-  --f-head:"Syne",system-ui,sans-serif;
-  --f-body:"Figtree",system-ui,sans-serif;
-  --f-mono:"Martian Mono",ui-monospace,monospace;
+  --f-display:"Newsreader",Georgia,"Times New Roman",serif;
+  --f-head:"Hanken Grotesk",system-ui,sans-serif;
+  --f-body:"Hanken Grotesk",system-ui,sans-serif;
+  --f-mono:"Red Hat Mono",ui-monospace,monospace;
   --f-ar:"Noto Kufi Arabic","Geeza Pro",sans-serif;
   --r:28px; --pad:clamp(18px,4vw,56px);
   --ease:cubic-bezier(.2,.8,.2,1);
@@ -465,4 +465,48 @@ ul,ol{list-style:none}
   html,body{cursor:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2228%22%20height%3D%2230%22%20viewBox%3D%220%200%2028%2030%22%3E%3Cpath%20d%3D%22M4%202.5v21l5.6-5.1%203.6%208.3%203.4-1.5-3.6-8.1h7.6z%22%20fill%3D%22%23000%22%20stroke%3D%22%23e6bd6a%22%20stroke-width%3D%221.8%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E") 4 2,auto}
   a,button,select,label,.panel,[data-magnetic]{cursor:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2228%22%20height%3D%2230%22%20viewBox%3D%220%200%2028%2030%22%3E%3Cpath%20d%3D%22M4%202.5v21l5.6-5.1%203.6%208.3%203.4-1.5-3.6-8.1h7.6z%22%20fill%3D%22%23000%22%20stroke%3D%22%23e6bd6a%22%20stroke-width%3D%221.8%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E") 4 2,pointer}
   input,textarea{cursor:text}
+}
+
+/* ===== v15: readable typography ===== */
+body{font-size:clamp(16px,1.12vw,18px);line-height:1.68;font-weight:400;letter-spacing:.003em}
+.mono{font-size:.76rem;font-weight:500;letter-spacing:.09em}
+.kicker{font-size:.8rem}
+.h2{font-weight:500;letter-spacing:-.015em;line-height:1.08}
+.h2 .w:nth-child(3n) > span{font-style:normal;color:inherit}
+.h2 .w:last-child > span{font-style:italic;color:var(--gold-hi)}
+.hero__title{font-weight:500;letter-spacing:-.02em;line-height:1.02}
+.hero__title em{font-weight:500}
+.hero__lede{color:rgba(244,238,223,.9)}
+.big{font-weight:400;line-height:1.38;letter-spacing:0}
+.mid,.cert dd{font-weight:600;letter-spacing:0}
+.num,.statbar b,.ring__mid b{font-weight:700;letter-spacing:-.02em}
+.statbar small,.sub{font-size:.9rem}
+.nav__links a{font-size:.92rem;font-weight:600}
+.nav__brand b{font-family:var(--f-display);font-weight:600}
+.nav__brand em{font-size:.56rem;font-weight:500}
+.btn{font-weight:700;font-size:.98rem;letter-spacing:.005em}
+.chip{font-weight:600;font-size:.86rem}
+.chip .mono,.code{font-size:.7rem}
+.panel h3{font-weight:500;line-height:1.12}
+.panel p{color:rgba(244,238,223,.86)}
+.step h4,.deal h4,.trio h4{font-weight:700;letter-spacing:-.01em}
+.step p,.deal p,.trio p,.lede{color:var(--mute);font-size:1rem}
+.fine{font-size:.7rem;letter-spacing:.05em;line-height:1.55}
+.cert dt,.cert__table th{font-size:.74rem;font-weight:500;letter-spacing:.09em}
+.cert__table{font-size:1rem}
+.cert__foot,.footer__base{font-size:.72rem;letter-spacing:.06em}
+.footer p{font-size:.98rem}
+.form label .mono{font-size:.74rem}
+.ar{font-size:1rem}
+.marquee__track .alt{font-weight:800}
+.idx{font-family:var(--f-display)}
+.deal__hub .mono{font-size:.6rem}
+.node i{font-size:.6rem}
+@media (min-width:900px){
+  .panel__body{font-size:clamp(13px,2.05vh,17.5px)}
+  .fine{font-size:clamp(.6rem,1.35vh,.7rem)}
+}
+@media (max-width:899px) and (orientation:portrait){
+  .hero__actions .btn{font-size:clamp(.8rem,3.5vw,.95rem)}
+  .statbar small{font-size:.76rem}
 }
