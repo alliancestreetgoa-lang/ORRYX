@@ -510,3 +510,27 @@ body{font-size:clamp(16px,1.12vw,18px);line-height:1.68;font-weight:400;letter-s
   .hero__actions .btn{font-size:clamp(.8rem,3.5vw,.95rem)}
   .statbar small{font-size:.76rem}
 }
+
+/* ===== v17: activity mix card filled out ===== */
+.bento__f{grid-template-columns:auto 1fr;gap:14px clamp(28px,4vw,64px);align-items:center}
+.orbit{width:clamp(200px,20vw,270px);height:clamp(200px,20vw,270px);margin:10px}
+.mix{min-width:0}
+.mix__title{font-family:var(--f-display);font-weight:500;font-size:clamp(1.5rem,2.5vw,2.3rem);line-height:1.15;margin-bottom:8px}
+.mix__title em{color:var(--gold-hi)}
+.mix__lede{color:var(--mute);max-width:60ch;margin-bottom:20px}
+.mix__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.mix__item{position:relative;display:grid;gap:3px;padding:16px 18px 16px 22px;border-radius:18px;background:rgba(0,0,0,.24);border:1px solid rgba(255,255,255,.1);overflow:hidden;transition:transform .45s var(--ease),background .35s,border-color .35s}
+.mix__item::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--c);box-shadow:0 0 18px var(--c)}
+.mix__item::after{content:"→";position:absolute;right:16px;top:14px;color:var(--c);opacity:0;transform:translateX(-8px);transition:.35s var(--ease)}
+.mix__item:hover{transform:translateY(-4px);background:rgba(255,255,255,.07);border-color:var(--c)}
+.mix__item:hover::after{opacity:1;transform:none}
+.mix__item .mono{color:var(--c);font-size:.72rem}
+.mix__item b{font-family:var(--f-head);font-weight:700;font-size:1.08rem;line-height:1.25}
+.mix__item small{color:var(--mute);font-size:.92rem;line-height:1.45}
+@media (max-width:899px){
+  .bento__f{grid-template-columns:1fr;justify-items:center;text-align:left}
+  .bento__f .label{justify-self:start}
+  .mix{width:100%}
+  .mix__title{text-align:center}.mix__lede{text-align:center;margin-inline:auto}
+}
+@media (max-width:620px){.mix__grid{grid-template-columns:1fr}}

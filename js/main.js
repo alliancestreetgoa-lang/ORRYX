@@ -143,6 +143,8 @@
     onEnter: els => gsap.to(els, { y: 0, autoAlpha: 1, scale: 1, duration: 1.3, ease: 'expo.out', stagger: .1, overwrite: true }) });
   gsap.set('[data-reveal]', { y: 50, autoAlpha: 0, scale: .97, force3D: true });
 
+  gsap.from('.mix__item', { y: 30, autoAlpha: 0, duration: 1, ease: 'expo.out', stagger: .12, scrollTrigger: { trigger: '.mix__grid', start: 'top 88%' } });
+
   /* ---------- counters ---------- */
   $$('[data-count]').forEach(el => {
     const to = +el.dataset.count, plain = 'plain' in el.dataset, o = { v: plain ? to - Math.min(to, 60) : 0 };
