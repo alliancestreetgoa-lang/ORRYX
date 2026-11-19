@@ -105,4 +105,4 @@ All six scene images and the logo were generated in ChatGPT in the Chrome profil
 - Company email, phone and domain are not known yet. The enquiry form is not connected.
 - Client to confirm the financial consultancy authorisation status and our descriptive wording.
 - No custom domain yet; the site is on the github.io address.
-- Phone and tablet were not re-checked after the typography change, the Activity Mix update and the footer fix.
+- Live site checked on phone (390×844), tablet (768×1024) and tablet landscape (1024×768) on 19 Nov 2026 after all changes: no problems found.
