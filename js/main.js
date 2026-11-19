@@ -45,11 +45,12 @@
   }
 
   gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.config({ ignoreMobileResize: true });
 
   /* ---------- smooth scroll ---------- */
   let lenis = null;
   if (window.Lenis) {
-    lenis = new Lenis({ duration: 1.15, smoothWheel: true });
+    lenis = new Lenis({ lerp: 0.085, smoothWheel: true, wheelMultiplier: 0.9 });
     lenis.on('scroll', ScrollTrigger.update);
     gsap.ticker.add(t => lenis.raf(t * 1000));
     gsap.ticker.lagSmoothing(0);
@@ -69,7 +70,7 @@
   /* ---------- preloader then hero intro ---------- */
   const intro = gsap.timeline({ paused: true, defaults: { ease: 'expo.out' } });
   intro
-    .from('#heroImg', { scale: 1.35, filter: 'blur(14px)', duration: 2.6 }, 0)
+    .from('#heroImg', { autoAlpha: 0, scale: innerWidth < 900 ? 1 : 1.14, duration: 2.4 }, 0)
     .from('.nav', { yPercent: -160, duration: 1.2, clearProps: 'transform' }, .2)
     .from('.hero__kicker', { y: 24, autoAlpha: 0, duration: 1 }, .35)
     .from('.hero__title .line > span', { yPercent: 115, rotate: 4, duration: 1.4, stagger: .12 }, .4)
@@ -107,7 +108,7 @@
   }));
 
   /* ---------- hero scroll parallax ---------- */
-  gsap.to('#heroImg', { yPercent: innerWidth < 900 ? 0 : -9, scale: innerWidth < 900 ? 1.04 : 1.12, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+  if (innerWidth >= 900) gsap.to('#heroImg', { yPercent: -6, scale: 1.05, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 0.4 } });
   gsap.to('.hero__inner', { yPercent: -18, autoAlpha: 0, ease: 'none', scrollTrigger: { trigger: '.hero', start: '35% top', end: 'bottom top', scrub: true } });
   gsap.to('.hero__chips', { yPercent: -30, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
 
@@ -120,7 +121,7 @@
     hero.addEventListener('pointermove', e => {
       const nx = e.clientX / innerWidth - .5, ny = e.clientY / innerHeight - .5;
       chips.forEach((c, i) => { const d = +c.dataset.depth; qx[i](nx * d * 2); qy[i](ny * d * 2); });
-      ix(nx * -22);
+      ix(nx * -18);
     });
   }
 
@@ -139,8 +140,8 @@
   /* ---------- reveals ---------- */
   $$('[data-split]').forEach(h => gsap.from($$('.w > span', h), { yPercent: 115, duration: 1.2, ease: 'expo.out', stagger: .045, scrollTrigger: { trigger: h, start: 'top 86%' } }));
   ScrollTrigger.batch('[data-reveal]', { start: 'top 88%', once: true,
-    onEnter: els => gsap.to(els, { y: 0, autoAlpha: 1, scale: 1, filter: 'blur(0px)', duration: 1.2, ease: 'expo.out', stagger: .1, overwrite: true }) });
-  gsap.set('[data-reveal]', { y: 60, autoAlpha: 0, scale: .96, filter: 'blur(8px)' });
+    onEnter: els => gsap.to(els, { y: 0, autoAlpha: 1, scale: 1, duration: 1.3, ease: 'expo.out', stagger: .1, overwrite: true }) });
+  gsap.set('[data-reveal]', { y: 50, autoAlpha: 0, scale: .97, force3D: true });
 
   /* ---------- counters ---------- */
   $$('[data-count]').forEach(el => {
@@ -160,7 +161,7 @@
   const track = $('#track'), panels = $$('.panel');
   mm.add('(min-width: 900px)', () => {
     const dist = () => track.scrollWidth - innerWidth;
-    const tw = gsap.to(track, { x: () => -dist(), ease: 'none', scrollTrigger: { trigger: '.activities', start: 'top top', end: () => '+=' + dist(), pin: true, scrub: 1, invalidateOnRefresh: true, anticipatePin: 1, refreshPriority: 1 } });
+    const tw = gsap.to(track, { x: () => -dist(), ease: 'none', scrollTrigger: { trigger: '.activities', start: 'top top', end: () => '+=' + dist(), pin: true, scrub: 0.8, invalidateOnRefresh: true, anticipatePin: 1, refreshPriority: 1 } });
     panels.forEach(p => {
       ScrollTrigger.create({ trigger: p, containerAnimation: tw, start: 'left 75%', onEnter: () => p.classList.add('is-in') });
       gsap.fromTo($('img', p), { xPercent: -6 }, { xPercent: 6, ease: 'none', scrollTrigger: { trigger: p, containerAnimation: tw, start: 'left right', end: 'right left', scrub: true } });
