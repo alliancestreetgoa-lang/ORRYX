@@ -534,3 +534,7 @@ body{font-size:clamp(16px,1.12vw,18px);line-height:1.68;font-weight:400;letter-s
   .mix__title{text-align:center}.mix__lede{text-align:center;margin-inline:auto}
 }
 @media (max-width:620px){.mix__grid{grid-template-columns:1fr}}
+
+/* ===== v18: footer wordmark fully visible ===== */
+.footer{overflow:hidden}
+.footer__word{font-size:20vw;line-height:1;letter-spacing:.04em;margin:0;padding:0 2vw .06em;white-space:nowrap;background:linear-gradient(180deg,rgba(230,189,106,.6),rgba(230,189,106,.14));-webkit-background-clip:text;background-clip:text;color:transparent}

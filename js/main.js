@@ -192,7 +192,7 @@
   /* ---------- licence rows + footer word ---------- */
   gsap.from('.cert__table tbody tr', { x: -40, autoAlpha: 0, duration: .9, ease: 'expo.out', stagger: .12, scrollTrigger: { trigger: '.cert__table', start: 'top 82%' } });
   gsap.from('.cert__grid > div', { y: 24, autoAlpha: 0, duration: .8, ease: 'expo.out', stagger: .07, scrollTrigger: { trigger: '.cert__grid', start: 'top 85%' } });
-  gsap.from('.footer__word', { yPercent: 45, autoAlpha: 0, ease: 'none', scrollTrigger: { trigger: '.footer', start: 'top bottom', end: 'bottom bottom', scrub: true } });
+  gsap.from('.footer__word', { yPercent: 30, autoAlpha: 0, ease: 'none', scrollTrigger: { trigger: '.footer__word', start: 'top bottom', end: 'center bottom', scrub: true } });
   gsap.to('.marquee__track', { xPercent: -8, ease: 'none', scrollTrigger: { trigger: '.marquee', start: 'top bottom', end: 'bottom top', scrub: true } });
 
   /* ---------- glass spotlight, tilt, magnetic, cursor ---------- */
