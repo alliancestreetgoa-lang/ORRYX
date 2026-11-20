@@ -36,6 +36,10 @@ Enquiries are made through the form on the website.
 ## Key pages
 - Home: https://alliancestreetgoa-lang.github.io/ORRYX/
 - Licensed activities: https://alliancestreetgoa-lang.github.io/ORRYX/#activities
+- Management consultancy: https://alliancestreetgoa-lang.github.io/ORRYX/management-consultancy/
+- Strategy advisory: https://alliancestreetgoa-lang.github.io/ORRYX/strategy-advisory/
+- Financial consultancy: https://alliancestreetgoa-lang.github.io/ORRYX/financial-consultancy/
+- Business brokerage: https://alliancestreetgoa-lang.github.io/ORRYX/business-brokerage/
 - Licence details: https://alliancestreetgoa-lang.github.io/ORRYX/#licence
 - Questions and answers: https://alliancestreetgoa-lang.github.io/ORRYX/#questions
 - Enquire: https://alliancestreetgoa-lang.github.io/ORRYX/#contact

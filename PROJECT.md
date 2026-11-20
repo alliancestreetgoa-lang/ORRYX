@@ -44,12 +44,16 @@ Source PDFs: `Business_License_-_New_179500777138.pdf` and `Activity Authorisati
 ## Files
 
 ```
-index.html          the whole page
+index.html          the home page
+management-consultancy/ strategy-advisory/ financial-consultancy/ business-brokerage/
+                    one index.html each: the four service pages (added 20 Nov 2026)
+js/page.js          lighter motion script used only by the service pages
 css/style.css       all styles (later "v6…v18" blocks at the bottom override earlier rules)
 js/main.js          all motion and behaviour
 vendor/             GSAP 3.12.5, ScrollTrigger, Lenis 1.1.14 (local copies)
-assets/img/         hero, management, strategy, finance, brokerage, dubai (.jpg)
-                    logo-full.png (original), logo-t.png and mark.png (transparent)
+assets/img/         hero, management, strategy, finance, brokerage, dubai (.webp), logo-t.webp, mark.webp,
+                    logo-full.png, og.jpg (share image), favicon-64.png, apple-touch-icon.png
+assets/src/         original full-size .jpg / .png files (not used by the pages; keep for re-export)
 robots.txt          welcomes search and AI crawlers, points to the sitemap
 sitemap.xml         the one page URL
 llms.txt            plain-text company summary for AI assistants
@@ -135,3 +139,13 @@ When a custom domain arrives:
 - Then add the site to Google Search Console and Bing Webmaster Tools and submit the sitemap.
 
 Still to do (needs the client): company email and phone (then add them to the page, JSON-LD and llms.txt), a Google Business Profile, a LinkedIn company page, and a domain.
+
+## Service pages and lighter images — added 20 November 2026
+
+- **Four service pages**, one folder each, same liquid-glass style: header with image, what it covers, when it fits, how it works, licence details, three questions, links to the other three activities. Each has its own title, description, canonical link and JSON-LD (Service + BreadcrumbList + FAQPage).
+- They are plain HTML files; edit them by hand. They share `css/style.css` (the "v21" block at the bottom) and use `js/page.js`, not `main.js`.
+- Home page links to them from: the four Licensed Activities panel titles, the Activity Mix tiles, and the footer Activities list. The panel layout and glide animation were not changed.
+- The "what it covers" explanations and "signs it is time to talk" lists are our own wording. Client should confirm them, like the rest of the descriptive text.
+- **Images** are now WebP: about 1.9 MB of scene images and logos went down to about 0.67 MB. To replace an image, export a new `.webp` from the original in `assets/src/` (scene panels 1400 px wide, hero and dubai 1672 px, quality about 78–82).
+- Facts are now repeated on the service pages too: when a licence fact changes, also check the four service pages (page text and their JSON-LD).
+- New pages must be added to `sitemap.xml` and to "Key pages" in `llms.txt`.
