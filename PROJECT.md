@@ -157,3 +157,10 @@ Still to do (needs the client): company email and phone (then add them to the pa
 - **Brokerage diagram:** more space between Seller, the ORRYX circle and Buyer.
 - **Dubai section:** less empty sky above the heading (padding-top 34vh instead of 46vh).
 - Checked at 390×844, 390×664 and 360×640, home page and a service page: no sideways scroll.
+
+## Tablet layout fixes — 20 November 2026 (CSS "v23")
+
+- **Tablet upright (561–899 px wide):** same hero fix as phones. The oryx starts below the menu bar, the text starts below its feet, and the intro shows in full. The top line keeps the licence number.
+- **Tablet sideways / small laptop (900–1199 px wide):** the headline used to run across the oryx's body. The headline is now smaller and stays to the left of the oryx; the oryx is slightly smaller and clear of the menu bar. Larger desktops are unchanged.
+- **Service pages:** in the licence card the Arabic activity name now has its own row on tablets and phones.
+- Checked at 768×1024 and 1024×768, home page and a service page: no sideways scroll. The pinned Licensed Activities panels still fit one screen at 1024×768.

@@ -590,8 +590,8 @@ body{font-size:clamp(16px,1.12vw,18px);line-height:1.68;font-weight:400;letter-s
 }
 .footer__brand img{height:auto}
 
-/* ===== v22: phone hero — whole oryx clear of the menu bar and of the text ===== */
-@media (max-width:560px) and (orientation:portrait){
+/* ===== v22: phone + tablet portrait hero — whole oryx clear of the menu bar and of the text ===== */
+@media (max-width:899px) and (orientation:portrait){
   .hero{--hh:min(70vw,42svh);padding-top:calc(88px + var(--hh) * .8)}
   .hero__media{height:calc(70px + var(--hh))}
   .hero__media img{top:70px;height:var(--hh);right:-14px;
@@ -607,3 +607,17 @@ body{font-size:clamp(16px,1.12vw,18px);line-height:1.68;font-weight:400;letter-s
   .deal__mid{height:124px}
   .dubai{padding-top:34vh}
 }
+/* v23: tablet portrait keeps the licence in the top line and normal intro size */
+@media (min-width:561px) and (max-width:899px) and (orientation:portrait){
+  .hero{--hh:min(56vw,36svh)}
+  .hero__lic{display:inline}
+  .hero__lede{font-size:1.02rem;line-height:1.6;max-width:56ch}
+}
+/* v23: tablet landscape / small laptop — headline stays left of the oryx, horns clear of the menu bar */
+@media (min-width:900px) and (max-width:1199px) and (min-aspect-ratio:13/10){
+  .hero__media img{top:13%;height:72%;right:-30px}
+  .hero__title{font-size:clamp(2.4rem,min(5.5vw,9.4vh),4rem)}
+  .hero__lede{max-width:40ch}
+}
+/* v23: service pages — Arabic activity name takes its own row on tablets and phones */
+@media (max-width:1000px){.cert__ar{grid-column:1/-1}.cert__ar dt,.cert__ar dd{text-align:left}}
