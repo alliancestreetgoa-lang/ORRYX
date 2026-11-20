@@ -50,6 +50,9 @@ js/main.js          all motion and behaviour
 vendor/             GSAP 3.12.5, ScrollTrigger, Lenis 1.1.14 (local copies)
 assets/img/         hero, management, strategy, finance, brokerage, dubai (.jpg)
                     logo-full.png (original), logo-t.png and mark.png (transparent)
+robots.txt          welcomes search and AI crawlers, points to the sitemap
+sitemap.xml         the one page URL
+llms.txt            plain-text company summary for AI assistants
 .nojekyll           needed for GitHub Pages
 ```
 
@@ -78,8 +81,9 @@ No build step. Plain HTML, CSS and JavaScript.
 7. **04 Brokerage desk** — seller ↔ Orryx ↔ buyer diagram and three steps (Prepare, Match, Arrange).
 8. **05 Dubai** — skyline image, registered address, Maps link.
 9. **06 Credentials** — the licence line by line, English and Arabic.
-10. **07 Enquire** — enquiry form.
-11. **Footer** — logo, company details, large ORRYX wordmark.
+10. **07 Questions** — six plain questions and answers (added 20 Nov 2026 for search and AI assistants).
+11. **08 Enquire** — enquiry form.
+12. **Footer** — logo, company details, large ORRYX wordmark.
 
 ## Responsive rules the owner asked for
 
@@ -106,3 +110,28 @@ All six scene images and the logo were generated in ChatGPT in the Chrome profil
 - Client to confirm the financial consultancy authorisation status and our descriptive wording.
 - No custom domain yet; the site is on the github.io address.
 - Live site checked on phone (390×844), tablet (768×1024) and tablet landscape (1024×768) on 19 Nov 2026 after all changes: no problems found.
+
+## Search and AI visibility (SEO / GEO) — added 20 November 2026
+
+What was added:
+
+- `index.html` head: shorter title, canonical link, Open Graph and Twitter share tags, small favicon and Apple icon, and one JSON-LD block (ProfessionalService + WebSite + FAQPage).
+- A visible **Questions** section (`#questions`). The FAQPage data in the head repeats these six answers word for word.
+- `robots.txt`, `sitemap.xml`, `llms.txt` in the site root.
+- `assets/img/og.jpg` (1200×630 share image), `favicon-64.png`, `apple-touch-icon.png`.
+- Method and Brokerage card headings changed from `h4` to `h3` (same look) so heading levels are in order.
+
+Rules to keep:
+
+- **The same fact lives in several places.** If a licence date, the address, the manager or an activity changes, update: the page text, the Questions section, the JSON-LD block in the head, and `llms.txt`.
+- The Questions answers and the FAQPage JSON-LD must stay identical.
+- Only state facts the client has given. No invented phone, email, awards, clients or reviews.
+- The site says commodity trading is not on the current licence. Remove that answer (page, JSON-LD, llms.txt) if the licence changes.
+
+When a custom domain arrives:
+
+- Replace `https://alliancestreetgoa-lang.github.io/ORRYX/` everywhere: canonical, `og:url`, `og:image`, `twitter:image`, JSON-LD, `robots.txt`, `sitemap.xml`, `llms.txt`.
+- On the github.io address the site sits in a sub-folder, so crawlers do not read its `robots.txt` or `llms.txt` (they only look at the root of a host). Nothing is blocked, but these files only take full effect on the company's own domain.
+- Then add the site to Google Search Console and Bing Webmaster Tools and submit the sitemap.
+
+Still to do (needs the client): company email and phone (then add them to the page, JSON-LD and llms.txt), a Google Business Profile, a LinkedIn company page, and a domain.

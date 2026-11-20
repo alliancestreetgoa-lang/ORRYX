@@ -1,0 +1,41 @@
+# Orryx Commodities L.L.C-FZ
+
+> Orryx Commodities L.L.C-FZ is a consultancy and business brokerage company
+> registered in the Meydan Free Zone, Dubai, United Arab Emirates. It is licensed
+> for management consultancy, strategy advisory, financial consultancy and the
+> brokerage of small and medium sized businesses.
+
+Arabic name: اوريكس كوموديتيز ش.ذ.م.م - منطقة حرة
+
+## What the company does
+- Management consultancy (activity code 7020.00): operating model and organisation design, process and performance improvement, governance, change support.
+- Strategy advisory (activity code 7020.11): growth and market-entry planning, business plans and roadmaps, competitive positioning, board and owner decision support.
+- Financial consultancy (activity code 6619.14): financial planning, budgets and forecasts, cash-flow and working-capital reviews, feasibility studies, funding and investor readiness.
+- Business brokerage (activity code 7490.02): arranging the purchase and sale of small and medium sized businesses, including professional practices.
+
+## What the company does not do
+- Commodity trading is not among the activities on the company's current business licence, despite the word "Commodities" in its name.
+- Real estate brokerage is not included in its brokerage activity.
+
+## Company facts
+- Legal form: Limited Liability Company (free zone)
+- Free zone: Meydan Free Zone, Dubai, U.A.E.
+- Licence number: 2538901.01
+- Formation number: 2538901
+- Licence issued: 17 October 2025
+- Licence valid to: 16 October 2027
+- Manager named on the licence: Stallone Dominic Shaikh
+- Registered address: Meydan Grandstand, 6th floor, Meydan Road, Nad Al Sheba, Dubai, U.A.E.
+
+## How an engagement works
+Listen, Diagnose, Design, Deliver, and, where buying or selling a business is the right move, Transact.
+
+## Contact
+Enquiries are made through the form on the website.
+
+## Key pages
+- Home: https://alliancestreetgoa-lang.github.io/ORRYX/
+- Licensed activities: https://alliancestreetgoa-lang.github.io/ORRYX/#activities
+- Licence details: https://alliancestreetgoa-lang.github.io/ORRYX/#licence
+- Questions and answers: https://alliancestreetgoa-lang.github.io/ORRYX/#questions
+- Enquire: https://alliancestreetgoa-lang.github.io/ORRYX/#contact
