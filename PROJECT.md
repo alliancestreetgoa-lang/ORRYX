@@ -149,3 +149,11 @@ Still to do (needs the client): company email and phone (then add them to the pa
 - **Images** are now WebP: about 1.9 MB of scene images and logos went down to about 0.67 MB. To replace an image, export a new `.webp` from the original in `assets/src/` (scene panels 1400 px wide, hero and dubai 1672 px, quality about 78–82).
 - Facts are now repeated on the service pages too: when a licence fact changes, also check the four service pages (page text and their JSON-LD).
 - New pages must be added to `sitemap.xml` and to "Key pages" in `llms.txt`.
+
+## Phone layout fixes — 20 November 2026 (CSS "v22" block)
+
+- **Hero on phones (up to 560 px wide, portrait):** the oryx is sized by screen width (`--hh: min(70vw, 42svh)`), starts below the menu bar so the horn tips show, and the text starts below its feet. The small top line no longer sits across the legs. On phones that line drops "· Licence 2538901.01" so it stays on one line, and the intro paragraph shows in full (no "…").
+- On short phone screens the stats bar sits just below the first screen; the oryx, headline, intro and buttons are in the first screen. Tablets keep the earlier one-screen rule.
+- **Brokerage diagram:** more space between Seller, the ORRYX circle and Buyer.
+- **Dubai section:** less empty sky above the heading (padding-top 34vh instead of 46vh).
+- Checked at 390×844, 390×664 and 360×640, home page and a service page: no sideways scroll.
